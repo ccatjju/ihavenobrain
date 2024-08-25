@@ -11,13 +11,15 @@ import Mentos from "./Mentos";
 import MentosImmer from "./MentosImmer";
 import AppForm from "./AppForm";
 import Apprap from "./Apprap";
+import Ihavenobrain from "./Ihavenobrain";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
+    <Ihavenobrain />
     {/* <AppProfile /> */}
     {/* <AppCounter /> */}
-    <AppUseEffect />
+    {/* <AppUseEffect /> */}
     {/* <AppXY /> */}
     {/* <Mento /> */}
     {/* <Mentos /> */}
