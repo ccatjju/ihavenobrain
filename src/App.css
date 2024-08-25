@@ -1,0 +1,82 @@
+.mainCounter {
+  display: flex;
+  justify-content: center;
+  width: 250px;
+  margin: 5px;
+  font-weight: 700;
+  background-color: rgba(60, 165, 179, 0.851);
+}
+
+.name {
+  color: orange;
+}
+
+.Profile {
+  position: relative;
+  width: 300px;
+  padding: 2rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  background-color: beige;
+  border-radius: 20px;
+  box-shadow: 10px 14px 37px -13px rgba(94, 87, 4, 0.75);
+  -webkit-box-shadow: 10px 14px 37px -13px rgba(94, 87, 4, 0.75);
+  -moz-box-shadow: 10px 14px 37px -13px rgba(94, 87, 4, 0.75);
+}
+
+.ProfilePhoto {
+  position: relative;
+  width: 300px;
+  /* height: 300px; */
+  /* background-color: black; */
+}
+
+.photo {
+  width: 300px;
+  border-radius: 100%;
+}
+
+.New {
+  position: absolute;
+  top: 15%;
+  left: 80%;
+  width: 50px;
+  border-radius: 5px;
+  background-color: green;
+  color: white;
+  text-align: center;
+  /* font-size: large; */
+  font-weight: bolder;
+  padding: 3px;
+}
+
+.Counter {
+  width: 200px;
+  height: 300px;
+  border: 3px solid rgba(77, 180, 193, 0.75);
+  border-radius: 10px;
+  /* background-color: aqua; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* 수평 가운데 정렬 */
+  align-items: center; /* 수직 가운데 정렬 */
+  margin: 5px;
+  transition: background-color 1s;
+}
+
+.Counter.hovered {
+  background-color: rgb(77, 180, 193);
+}
+
+.Num {
+  font-size: 7rem;
+}
+
+.Button {
+  width: 80px;
+  height: 40px;
+  font-size: larger;
+  border-radius: 5px;
+  margin-top: 10px;
+  background-color: yellow;
+}
