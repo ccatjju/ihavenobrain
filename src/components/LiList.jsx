@@ -24,7 +24,7 @@ export default function LiList() {
   return (
     <div>
       <input id="checkBox" type="checkbox" onChange={handleChange} />
-      <label htmlFor="checkBox">딴거딴거 🤪🤪</label>
+      <label htmlFor="checkBox">다룽거다룽거 🤪🤪</label>
       <ul>
         {product.map((product) => (
           <li key={product.id}>
