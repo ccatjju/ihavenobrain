@@ -5,6 +5,9 @@
   background-color: rgb(94, 235, 81);
   clip-path: polygon(0 0, 100% 0%, 100% 70%, 0 25%);
   border: 2px solid black;
+  display: flex;
+  /* align-items: center; */
+  /* justify-content: space-around; */
 }
 
 .Footer {
@@ -25,4 +28,92 @@
   left: 10px;
   bottom: 10px;
   color: white;
+}
+
+.Menu {
+  width: 100px;
+  height: 100%;
+  border-right: 3px solid rgb(59, 170, 49);
+  /* background-color: red; */
+}
+
+.body {
+  width: 100%;
+  height: 600px;
+  /* background-color: blanchedalmond; */
+}
+
+.scroll {
+  height: 35px; /* 텍스트 높이에 맞춰 조정 */
+  width: 100%;
+  overflow: hidden;
+  top: 100px;
+  position: relative;
+  background-color: darkolivegreen;
+}
+
+.scroll div {
+  display: block;
+  width: 200%;
+  height: 35px; /* 텍스트 높이에 맞춰 조정 */
+  position: absolute;
+  overflow: hidden;
+  animation: scroll 5s linear infinite;
+}
+
+.scroll span {
+  font-size: 30px;
+  font-weight: bold;
+  float: left;
+  width: 50%;
+}
+
+@keyframes scroll {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -100%;
+  }
+}
+
+.topdown {
+  width: 80px; /* 컨테이너 너비 */
+  height: 500px; /* 컨테이너 높이 */
+  overflow: hidden; /* 컨테이너 영역을 벗어나는 글자를 숨김 */
+  top: 0px;
+  left: 120px;
+  position: relative;
+  background-color: rgb(86, 86, 86); /* 배경색 설정 */
+  display: flex;
+  justify-content: center; /* 수평 중앙 정렬 */
+  align-items: center; /* 수직 중앙 정렬 */
+  opacity: 80%;
+}
+
+.topdown div {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  animation: topdown 10s linear infinite; /* 애니메이션 설정 */
+  align-items: center; /* 텍스트를 중앙에 배치 */
+}
+
+.topdown span {
+  writing-mode: vertical-rl; /* 텍스트를 세로로 표시하고 오른쪽에서 왼쪽으로 읽힘 */
+  text-orientation: upright; /* 글자를 세운 상태로 표시 */
+  font-size: 24px; /* 글자 크기 */
+  font-weight: bold; /* 글자 두께 */
+  color: white; /* 글자 색상 */
+  padding: 10px 0; /* 세로 패딩을 조정하여 중앙에 맞춤 */
+  text-align: center; /* 텍스트 중앙 정렬 */
+}
+
+@keyframes topdown {
+  0% {
+    top: 100%; /* 시작 위치: 아래쪽 */
+  }
+  100% {
+    top: -100%; /* 끝 위치: 위쪽 */
+  }
 }
