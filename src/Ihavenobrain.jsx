@@ -6,11 +6,12 @@ export default function Ihavenobrain() {
     <div>
       <div className="Header">
         <div className="Menu">메뉴1</div>
-        <div className="Menu">메뉴2</div>
+        <div className="Menu_2">메뉴2</div>
         <div className="Menu">메뉴3</div>
-        <div className="Menu">메뉴4</div>
+        <div className="Menu_4">메뉴4</div>
         <div className="Menu">메뉴5</div>
       </div>
+      <div>으아아아앙 메뉴 효과 추가</div>
       <div className="body">
         <h1>보지 아니하지 아니할 수 없는 대자보</h1>
         <div class="scroll">
