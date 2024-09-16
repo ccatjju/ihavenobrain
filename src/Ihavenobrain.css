@@ -31,6 +31,25 @@
   color: white;
 }
 
+.Menu,
+.Menu_2,
+.Menu_4 {
+  transition: all 0.25s;
+  width: 30%;
+  height: 10rem;
+  background: #ff9100;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.Menu:active,
+.Menu_2:active,
+.Menu_4:active {
+  scale: 200%;
+}
+
 /* 메뉴 스타일과 애니메이션 설정 */
 .Menu {
   flex: 1;
