@@ -106,7 +106,7 @@ export default function Ihavenobrain() {
       ) : (
         <div className="Header_none">
           <div className="Header_spin">
-            당연히 있을꺼라 생각했겠지만, 당연한 것은 없어 바보야 바보야
+            당연히 메뉴가 있을꺼라 생각했겠지만, 당연한 것은 없어 바보야 바보야
             바보바보
           </div>
         </div>
