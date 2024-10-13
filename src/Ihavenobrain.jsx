@@ -16,6 +16,26 @@ export default function Ihavenobrain() {
   // Footer의 랜덤 left 값을 관리하는 상태
   const [footerLeft, setFooterLeft] = useState(0);
   const [isFooterVisible, setIsFooterVisible] = useState(false);
+  const [bodyView, setBodyView] = useState(true);
+  const [headerView, setHeaderView] = useState(true);
+  const [footerView, setFooterView] = useState(true);
+
+  useEffect(() => {
+    // body영역이 사라지는 처리
+    setTimeout(() => {
+      setBodyView(false);
+    }, 2500);
+
+    // header 영역이 사라지는 처리
+    setTimeout(() => {
+      setHeaderView(false);
+    }, 4500);
+
+    // footer 영역이 사라지는 처리
+    setTimeout(() => {
+      setFooterView(false);
+    }, 6500);
+  });
 
   useEffect(() => {
     const randomLeft = Math.floor(Math.random() * 100); // 0 ~ 100vw 사이의 랜덤한 값
@@ -30,7 +50,7 @@ export default function Ihavenobrain() {
   // 페이지 로드 시 40% 확률로 메뉴 대신 메시지를 보여주기 위한 로직
   useEffect(() => {
     const randomValue = Math.random();
-    if (randomValue > 0.4) {
+    if (randomValue > 0.5) {
       setShowMenu(false); // 70% 확률로 메시지를 표시
     }
 
@@ -52,6 +72,7 @@ export default function Ihavenobrain() {
   // Menu 클릭 시 무작위 배경색 적용
   const handleMenuClick = (e) => {
     e.currentTarget.style.backgroundColor = getRandomColor();
+    alert("이걸 누르면 이제 새로운 페이지가 나와야하는데 말이지.,흠..어쩌지..");
   };
 
   // 푸터 마우스 호버시 발작
@@ -85,79 +106,102 @@ export default function Ihavenobrain() {
 
   return (
     <div>
-      {showMenu ? (
-        <div className="Header">
-          <div className="Menu" onClick={handleMenuClick}>
-            메뉴1
+      {headerView ? (
+        <div>
+          {showMenu ? (
+            <div className="Header">
+              <div className="Menu" onClick={handleMenuClick}>
+                메뉴1
+              </div>
+              <div className="Menu_2" onClick={handleMenuClick}>
+                메뉴2
+              </div>
+              <div className="Menu" onClick={handleMenuClick}>
+                메뉴3
+              </div>
+              <div className="Menu_4" onClick={handleMenuClick}>
+                메뉴4
+              </div>
+              <div className="Menu" onClick={handleMenuClick}>
+                메뉴5
+              </div>
+            </div>
+          ) : (
+            <div className="Header_none">
+              <div className="Header_spin">
+                당연히 메뉴가 있을꺼라 생각했겠지만, 당연한 것은 없어 바보야
+                바보야 바보바보
+              </div>
+            </div>
+          )}
+        </div>
+      ) : (
+        <div className="noView">여기도</div>
+      )}
+
+      {bodyView ? (
+        <div>
+          <div> - 절대 못 찾을 수 없는 메뉴 효과 추가</div>
+          <div> - 인간의 손길을 거부하는 푸터 추가 </div>
+          <div> - 계속 눌러보고 싶은 강려크한 메뉴 버튼 클릭 피드백 </div>
+          <div> - 나타나고 싶을 때, 나타나고 싶은 곳에 나타나는 존재들 </div>
+          <div>
+            - 아..조금 망했다. 프론트 페이지 라우팅을 안해놨다. 이게 바로
+            효율성을 위한 리팩토링이구나
           </div>
-          <div className="Menu_2" onClick={handleMenuClick}>
-            메뉴2
-          </div>
-          <div className="Menu" onClick={handleMenuClick}>
-            메뉴3
-          </div>
-          <div className="Menu_4" onClick={handleMenuClick}>
-            메뉴4
-          </div>
-          <div className="Menu" onClick={handleMenuClick}>
-            메뉴5
+          <div className="body">
+            <h1>보지 아니하지 아니할 수 없는 대자보</h1>
+            <div className="scroll">
+              <div>
+                <span>
+                  나날이 사람들은 문해력이 낮아지고 있다. 그래서 중요한 내용을
+                  보지 않고 넘어간다. 참을 수 엄따.
+                </span>
+                <span>
+                  나날이 사람들은 문해력이 낮아지고 있다. 그래서 중요한 내용을
+                  보지 않고 넘어간다. 참을 수 엄따.
+                </span>
+              </div>
+            </div>
+            <div className="topdown">
+              <div>
+                <span>
+                  보아라 사랑이 고픈 소년들아 보아라 사랑을 나눌 소녀들아 청춘의
+                  환상과 정열 가득 모아 정글은 언제나 맑음 뒤 흐림!
+                </span>
+                <span>
+                  보아라 사랑이 고픈 소년들아 보아라 사랑을 나눌 소녀들아 청춘의
+                  환상과 정열 가득 모아 정글은 언제나 맑음 뒤 흐림!
+                </span>
+                <span>
+                  보아라 사랑이 고픈 소년들아 보아라 사랑을 나눌 소녀들아 청춘의
+                  환상과 정열 가득 모아 정글은 언제나 맑음 뒤 흐림!
+                </span>
+                <span>
+                  보아라 사랑이 고픈 소년들아 보아라 사랑을 나눌 소녀들아 청춘의
+                  환상과 정열 가득 모아 정글은 언제나 맑음 뒤 흐림!
+                </span>
+              </div>
+            </div>
           </div>
         </div>
       ) : (
-        <div className="Header_none">
-          <div className="Header_spin">
-            당연히 메뉴가 있을꺼라 생각했겠지만, 당연한 것은 없어 바보야 바보야
-            바보바보
-          </div>
-        </div>
+        <div className="noView">존재한다는 것은 없어질 수도 있다는거지.</div>
       )}
-      <div> - 절대 못 찾을 수 없는 메뉴 효과 추가</div>
-      <div> - 인간의 손길을 거부하는 푸터 추가 </div>
-      <div> - 계속 눌러보고 싶은 강려크한 메뉴 버튼 클릭 피드백 </div>
-      <div> - 나타나고 싶을 때, 나타나고 싶은 곳에 나타나는 존재들 </div>
-      <div className="body">
-        <h1>보지 아니하지 아니할 수 없는 대자보</h1>
-        <div className="scroll">
-          <div>
-            <span>
-              나날이 사람들은 문해력이 낮아지고 있다. 그래서 중요한 내용을 보지
-              않고 넘어간다. 참을 수 엄따.
-            </span>
-            <span>
-              나날이 사람들은 문해력이 낮아지고 있다. 그래서 중요한 내용을 보지
-              않고 넘어간다. 참을 수 엄따.
-            </span>
+      {footerView ? (
+        <div>
+          <div
+            className={`Footer ${isFooterVisible ? "FooterVisible" : ""}`}
+            onMouseEnter={handleHover}
+            onMouseLeave={handleMouseLeave}
+            style={{ left: footerLeft }}
+          >
+            <div className="Footer-content">{footerText}</div>
           </div>
         </div>
-        <div className="topdown">
-          <div>
-            <span>
-              보아라 사랑이 고픈 소년들아 보아라 사랑을 나눌 소녀들아 청춘의
-              환상과 정열 가득 모아 정글은 언제나 맑음 뒤 흐림!
-            </span>
-            <span>
-              보아라 사랑이 고픈 소년들아 보아라 사랑을 나눌 소녀들아 청춘의
-              환상과 정열 가득 모아 정글은 언제나 맑음 뒤 흐림!
-            </span>
-            <span>
-              보아라 사랑이 고픈 소년들아 보아라 사랑을 나눌 소녀들아 청춘의
-              환상과 정열 가득 모아 정글은 언제나 맑음 뒤 흐림!
-            </span>
-            <span>
-              보아라 사랑이 고픈 소년들아 보아라 사랑을 나눌 소녀들아 청춘의
-              환상과 정열 가득 모아 정글은 언제나 맑음 뒤 흐림!
-            </span>
-          </div>
-        </div>
-      </div>
-      <div
-        className={`Footer ${isFooterVisible ? "FooterVisible" : ""}`}
-        onMouseEnter={handleHover}
-        onMouseLeave={handleMouseLeave}
-        style={{ left: footerLeft }}
-      >
-        <div className="Footer-content">{footerText}</div>
-      </div>
+      ) : (
+        <div className="noView">마찬가지로, 여기도.</div>
+      )}
     </div>
   );
 }

@@ -1,3 +1,11 @@
+/* 전체 페이지의 높이를 화면 높이에 맞춤 */
+body,
+html {
+  height: 100vh;
+  overflow: hidden; /* 스크롤 비활성화 */
+  margin: 0; /* 페이지 여백 제거 */
+}
+
 .Header {
   position: relative;
   width: 100%;
@@ -52,6 +60,15 @@
     color: red;
     transform: rotate(360deg);
   }
+}
+
+.noView {
+  margin-top: 50px;
+  margin-left: 50px;
+  font-size: xx-large;
+  font-weight: bolder;
+  transform: translateY(50px); /* 처음에 아래에서 위로 올라오는 효과 */
+  transition: opacity 1s ease, transform 1s ease; /* 부드러운 나타나는 효과 */
 }
 
 .Footer {
